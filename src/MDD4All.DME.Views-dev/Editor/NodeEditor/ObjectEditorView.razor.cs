@@ -114,7 +114,7 @@ namespace MDD4All.DME.Views.Editor
             {
                 if (action == EditorAction.Delete)
                 {
-                    referenceEditorViewModel.DeleteCommand.Execute(null);
+                    referenceEditorViewModel.DeleteItemCommand.Execute(null);
                 }
                 else
                 {
@@ -137,7 +137,7 @@ namespace MDD4All.DME.Views.Editor
                                 }
                                 else if (action == EditorAction.Add)
                                 {
-                                    collection.AddElementCommand.Execute(null);
+                                    collection.AddItemCommand.Execute(null);
                                     
                                 }
                             }

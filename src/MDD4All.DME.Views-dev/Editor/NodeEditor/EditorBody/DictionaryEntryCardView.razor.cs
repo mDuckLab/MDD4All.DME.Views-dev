@@ -49,9 +49,9 @@ namespace MDD4All.DME.Views.Editor
 
         private void OnDeleteEntry()
         {
-            if (DataContext.DeleteCommand != null && DataContext.DeleteCommand.CanExecute(null))
+            if (DataContext.DeleteItemCommand != null && DataContext.DeleteItemCommand.CanExecute(null))
             {
-                DataContext.DeleteCommand.Execute(null);
+                DataContext.DeleteItemCommand.Execute(null);
             }
         }
 
