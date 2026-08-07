@@ -27,9 +27,9 @@
 
     @* --- BREADCRUMB AREA --- *@
     <section class="breadcrumb-area">
-        @if (EditorState.TreeViewModel?.SelectedNodeParentList != null)
+        @if (Editor.TreeViewModel?.SelectedNodeParentList != null)
         {
-            <BreadcrumbView Path="EditorState.TreeViewModel.SelectedNodeParentList"
+            <BreadcrumbView Path="Editor.TreeViewModel.SelectedNodeParentList"
                             TitleSelector="@(node => ((ObjectEditorViewModel)node).Title)" />
         }
     </section>
@@ -38,10 +38,10 @@
     <aside class="explorer-area">
         <div class="panel-header">Explorer</div>
         <div class="explorer-content">
-            @if (EditorState.TreeViewModel != null)
+            @if (Editor.TreeViewModel != null)
             {
                 <MvvmTree TNode="ObjectEditorViewModel"
-                          DataContext="@EditorState.TreeViewModel"
+                          DataContext="@Editor.TreeViewModel"
                           SelectedNodeChanged="OnTreeSelectionChange"
                           ShowTreeIcons="@ExplorerSettings.ShowTypeSymbols"
                           TypeSymbolSelector="GetTypeSymbol">
@@ -56,7 +56,7 @@
 
     @* --- MAIN EDITOR AREA --- *@
     <main class="editor-area">
-        @if (EditorState.ShowRawData)
+        @if (Editor.ShowRawData)
         {
             <div class="panel-header">
                 Raw Data &nbsp;&nbsp;
@@ -75,9 +75,9 @@
         {
             <div class="panel-header">Editor</div>
             <div class="editor-body">
-                @if (EditorState.SelectedEditorViewModel != null)
+                @if (Editor.SelectedEditorViewModel != null)
                 {
-                    <ObjectEditorView ViewModel="@((ObjectEditorViewModel)EditorState.SelectedEditorViewModel)"
+                    <ObjectEditorView ViewModel="@((ObjectEditorViewModel)Editor.SelectedEditorViewModel)"
                                       MaxDepth="@EditorSettings.MaxDepth"
                                       CurrentDepth="1" />
                 }

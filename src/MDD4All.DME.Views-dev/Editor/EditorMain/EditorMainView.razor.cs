@@ -20,10 +20,10 @@ namespace MDD4All.DME.Views.Editor
 
 
         [Inject]
-        public INavigation Navigation { get; set; } = null!;
+        public MainViewModel Navigation { get; set; } = null!;
 
         [Inject]
-        public IEditorState EditorState { get; set; } = null!;
+        public EditorViewModel Editor { get; set; } = null!;
 
         [Inject]
         public DataFileManagerViewModel DataFileManager { get; set; } = null!;
@@ -40,7 +40,7 @@ namespace MDD4All.DME.Views.Editor
         #region Lifecycle
         protected override void OnInitialized()
         {
-            this.EditorState.PropertyChanged += this.OnEditorStatePropertyChanged;
+            this.Editor.PropertyChanged += this.OnEditorPropertyChanged;
             LanguageSetter.CultureChanged += OnCultureChanged;
             EditorSettings.PropertyChanged += OnEditorSettingsPropertyChanged;
             ExplorerSettings.PropertyChanged += OnExplorerSettingsPropertyChanged;
@@ -61,23 +61,23 @@ namespace MDD4All.DME.Views.Editor
 
         public void Dispose()
         {
-            this.EditorState.PropertyChanged -= this.OnEditorStatePropertyChanged;
+            this.Editor.PropertyChanged -= this.OnEditorPropertyChanged;
             EditorSettings.PropertyChanged -= OnEditorSettingsPropertyChanged;
             ExplorerSettings.PropertyChanged -= OnExplorerSettingsPropertyChanged;
         }
         #endregion
 
         #region Event Handlers
-        private void OnEditorStatePropertyChanged(object? sender, PropertyChangedEventArgs e)
+        private void OnEditorPropertyChanged(object? sender, PropertyChangedEventArgs e)
         {
             this.InvokeAsync(this.StateHasChanged);
         }
 
         private void OnTreeSelectionChange(ITreeNode node)
         {
-            if (this.EditorState.TreeViewModel != null)
+            if (this.Editor.TreeViewModel != null)
             {
-                this.EditorState.TreeViewModel.SelectedNode = node;
+                this.Editor.TreeViewModel.SelectedNode = node;
             }
         }
 
