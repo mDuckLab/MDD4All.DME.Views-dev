@@ -104,13 +104,19 @@ namespace MDD4All.DME.Views.Editor
         private async Task ApplyTintIntensity()
         {
             string intensity = EditorSettings.TintEnabled ? "6%" : "0%";
-            await JSRuntime.InvokeVoidAsync("eval",
-                $"document.documentElement.style.setProperty('--tint-intensity', '{intensity}')");
+            await JSRuntime.InvokeVoidAsync("setTintIntensity", intensity);
         }
 
         private string GetTypeSymbol(ITreeNode node)
         {
-            return (node as ObjectEditorViewModel)?.TypeSymbol ?? "";
+            string result = "";
+
+            if (node is ObjectEditorViewModel objectEditorViewModel)
+            {
+                result = objectEditorViewModel.TypeSymbol;
+            }
+
+            return result;
         }
 
         #endregion
