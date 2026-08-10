@@ -8,7 +8,7 @@ namespace MDD4All.DME.Views.DataManager
     public partial class DataManagerView
     {
         [Parameter]
-        public DataManagerViewModel ViewModel { get; set; } = null!;
+        public WebDataManagerViewModel ViewModel { get; set; } = null!;
 
         [Inject]
         public IFileImportService FileImportService { get; set; } = null!;
