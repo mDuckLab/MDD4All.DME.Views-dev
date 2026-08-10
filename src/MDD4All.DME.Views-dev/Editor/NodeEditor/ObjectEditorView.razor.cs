@@ -147,7 +147,7 @@ namespace MDD4All.DME.Views.Editor
                             if (referenceEditorViewModel is DictionaryEditorViewModel dictionary)
                             {
                                 if (action == EditorAction.Create) dictionary.CreateInstanceCommand.Execute(null);
-                                else if (action == EditorAction.Add) dictionary.AddElementCommand.Execute(null);
+                                else if (action == EditorAction.Add) dictionary.AddItemCommand.Execute(null);
                             }
                             break;
                     }
