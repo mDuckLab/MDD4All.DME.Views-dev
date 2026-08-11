@@ -24,6 +24,10 @@
             {
                 case SettingsCategory.Global:
                     <LanguageSelection />
+                    <div class="settings-toggle">
+                        <input class="form-check-input" type="checkbox" role="switch" id="saveTypeInformation" @bind="DataSettings.SaveTypeInformation" />
+                        <label class="settings-toggle-label" for="saveTypeInformation">Typinformation mitspeichern</label>
+                    </div>
                     break;
 
                 case SettingsCategory.Editor:

@@ -1,3 +1,4 @@
+using MDD4All.DME.ViewModels.DataManager;
 using MDD4All.DME.ViewModels.Editor.Settings;
 using Microsoft.AspNetCore.Components;
 
@@ -10,6 +11,9 @@ namespace MDD4All.DME.Views.SettingsDialog
 
         [Inject]
         public ExplorerSettingsViewModel ExplorerSettings { get; set; } = null!;
+
+        [Inject]
+        public DataManagerSettingsViewModel DataSettings { get; set; } = null!;
 
         [Parameter]
         public EventCallback<bool> OnClose { get; set; }
