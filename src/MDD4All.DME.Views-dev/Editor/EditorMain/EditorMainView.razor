@@ -13,7 +13,6 @@
     <header class="top-toolbar">
         <div class="tool-group">
             <EditorMainToolbar />
-            @* <DataManagerView ViewModel="MainViewModel.DataManagerViewModel" /> *@
         </div>
 
         <TreeDisplayToggle @bind-Active="ExplorerSettings.ShowIcons" />
@@ -63,12 +62,12 @@
 
                     JSON &nbsp;<div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox"
-                               @bind="DataFileManager.DataEditorViewModel!.ShowXml"/> </div>
+                               @bind="DataFile.DataEditorViewModel!.ShowXml"/> </div>
                     XML
 
             </div>
             <div class="editor-body">
-                <RawDataView DataContext="DataFileManager.DataEditorViewModel" />
+                <RawDataView DataContext="DataFile.DataEditorViewModel" />
             </div>
         }
         else
@@ -92,6 +91,6 @@
     </main>
 
     <div class="status-bar-area">
-        <StatusBarView DataContext="DataFileManager" />
+        <StatusBarView DataContext="DataFile" />
     </div>
 </div>

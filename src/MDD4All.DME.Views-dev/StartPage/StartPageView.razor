@@ -9,13 +9,13 @@
     </div>
     <div class="curentDataModel">
         Current Data Model:<br/>
-        @if(DataContext.Configuration.CurrentDataModel == null)
+        @if(Settings.CurrentDataModel == null)
         {
             <span class="currentDataModelTitle">Nothing selected.</span>
         }
         else
         {
-            <span class="currentDataModelTitle"><i class="bi bi-x-diamond-fill"></i> @DataContext.Configuration.CurrentDataModel.FullTypeName</span>
+            <span class="currentDataModelTitle"><i class="bi bi-x-diamond-fill"></i> @Settings.CurrentDataModel.FullTypeName</span>
         }
 
     </div>
@@ -27,18 +27,18 @@
     </div>
     <div class="dataModelCommands">
         <div class="commandLink"
-             @onclick="() => DataContext.OpenDataModelCommand.Execute(null)">Open a data model</div>
+             @onclick="() => Model.OpenDataModelCommand.Execute(null)">Open a data model</div>
     </div>
     <div class="dataModelRecentHeader">
         Recent Data Models
     </div>
     <div class="dataModelRecentEntries">
-        @for(int counter = 0; counter < DataContext.Configuration.RecentDataModels.Count(); counter++)
+        @for(int counter = 0; counter < Settings.RecentDataModels.Count(); counter++)
         {
             int index = counter;
-            Configurations.DataModelDescriptor descriptor = DataContext.Configuration.RecentDataModels[index];
+            Configurations.DataModelDescriptor descriptor = Settings.RecentDataModels[index];
             <div class="commandLink"
-                 @onclick="() => DataContext.SetDataModelFromRecentListCommand.Execute(index)">@descriptor.FullTypeName</div>
+                 @onclick="() => Model.SetDataModelFromRecentListCommand.Execute(index)">@descriptor.FullTypeName</div>
         }
     </div>
 
@@ -50,21 +50,21 @@
     </div>
     <div class="dataFileCommands">
         <div class="commandLink"
-             @onclick="() => DataContext.NewDataFileCommand.Execute(null)">Create a new file</div>
+             @onclick="() => DataFile.NewDataFileCommand.Execute(null)">Create a new file</div>
 
         <div class="commandLink"
-             @onclick="() => DataContext.OpenDataFileCommand.Execute(null)">Open an existing file</div>
+             @onclick="() => DataFile.OpenDataFileCommand.Execute(null)">Open an existing file</div>
     </div>
     <div class="dataFileRecentHeader">
         Recent Data Files
     </div>
     <div class="dataFileRecentEntries">
-        @for (int counter = 0; counter < DataContext.Configuration.RecentDataFiles.Count(); counter++)
+        @for (int counter = 0; counter < Settings.RecentDataFiles.Count(); counter++)
         {
             int index = counter;
-            Configurations.DataFileDescriptor descriptor = DataContext.Configuration.RecentDataFiles[index];
+            Configurations.DataFileDescriptor descriptor = Settings.RecentDataFiles[index];
             <div class="commandLink"
-                 @onclick="() => DataContext.OpenRecentDataFileCommand.Execute(index)">
+                 @onclick="() => DataFile.OpenRecentDataFileCommand.Execute(index)">
                 @descriptor.FilePath
             </div>
         }

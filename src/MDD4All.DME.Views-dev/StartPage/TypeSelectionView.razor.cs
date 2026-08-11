@@ -7,7 +7,7 @@ namespace MDD4All.DME.Views.StartPage
     public partial class TypeSelectionView
     {
         [Inject]
-        public DataManagerFileViewModel DataContext { get; set; } = null!;
+        public DataManagerModelViewModel DataContext { get; set; } = null!;
 
         private void OnSelectionDialogClose(bool args)
         {

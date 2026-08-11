@@ -7,13 +7,13 @@
         @onclick="() => Navigation.ShowStartPage()" />
 
     <button class="btn btn-outline-primary btn-sm"
-            @onclick="() => DataFileManager.SaveDataFileCommand.Execute(null)">
+            @onclick="() => DataFile.SaveDataFileCommand.Execute(null)">
         <i class="bi bi-save-fill"></i>
         Save
     </button>
 
     <button class="btn btn-outline-secondary btn-sm"
-            @onclick="() => DataFileManager.SaveDataFileAsCommand.Execute(null)">
+            @onclick="() => DataFile.SaveDataFileAsCommand.Execute(null)">
         <i class="bi bi-save"></i>
         Save as...
     </button>

@@ -1,0 +1,11 @@
+.mainPanel[b-2cr9i8m2ih] {
+    height: 50px;
+    background-color: white;
+    width: 100%;
+    display:flex;
+}
+
+.startButton[b-2cr9i8m2ih] {
+    width: 50px;
+    height: 40px;
+}

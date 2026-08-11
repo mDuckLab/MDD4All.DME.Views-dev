@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\MDD4All.DME.Views.props" />
+</Project>

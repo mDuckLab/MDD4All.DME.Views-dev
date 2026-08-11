@@ -1,0 +1,16 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/MDD4All.DME.Views/MDD4All.DME.Views.8hmz4tndjc.bundle.scp.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\MDD4All.DME.Views.8hmz4tndjc.bundle.scp.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"8hmz4tndjc"},{"Name":"integrity","Value":"sha256-jCSbbO/A5soOhuhQ0Qim0rIMdoDGu1hFteDQoehwexU="},{"Name":"label","Value":"_content/MDD4All.DME.Views/MDD4All.DME.Views.bundle.scp.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"16486"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022jCSbbO/A5soOhuhQ0Qim0rIMdoDGu1hFteDQoehwexU=\u0022"},{"Name":"Last-Modified","Value":"Thu, 06 Aug 2026 07:37:03 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MDD4All.DME.Views/MDD4All.DME.Views.bundle.scp.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\MDD4All.DME.Views.8hmz4tndjc.bundle.scp.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-jCSbbO/A5soOhuhQ0Qim0rIMdoDGu1hFteDQoehwexU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"16486"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022jCSbbO/A5soOhuhQ0Qim0rIMdoDGu1hFteDQoehwexU=\u0022"},{"Name":"Last-Modified","Value":"Thu, 06 Aug 2026 07:37:03 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>
