@@ -10,7 +10,7 @@ namespace MDD4All.DME.Views.Dialogs
 
         public void OnDialogClose()
         {
-            DataContext.ActiveOverlay = EOverlayState.None;
+            DataContext.ActiveOverlay = OverlayState.None;
         }
 
     }
