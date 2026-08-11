@@ -6,7 +6,7 @@ namespace MDD4All.DME.Views.StartPage
     public partial class StartPageView
     {
         [Inject]
-        public DataManagerViewModel DataContext { get; set; } = null!;
+        public DataManagerFileViewModel DataContext { get; set; } = null!;
 
         [Parameter]
         public EventCallback OnSettingsRequested { get; set; }

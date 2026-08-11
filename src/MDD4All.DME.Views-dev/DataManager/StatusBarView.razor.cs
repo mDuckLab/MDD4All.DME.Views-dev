@@ -6,6 +6,6 @@ namespace MDD4All.DME.Views.DataManager
     public partial class StatusBarView
     {
         [Parameter]
-        public DataManagerViewModel DataContext { get; set; } = null!;
+        public DataManagerFileViewModel DataContext { get; set; } = null!;
     }
 }
