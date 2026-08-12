@@ -10,7 +10,7 @@ namespace MDD4All.DME.Views.DataManager
         [Inject] private IJSRuntime _js { get; set; } = null!;
 
         [Parameter]
-        public DataEditorViewModel DataContext { get; set; } = null!;
+        public DataSerializationViewModel DataContext { get; set; } = null!;
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
