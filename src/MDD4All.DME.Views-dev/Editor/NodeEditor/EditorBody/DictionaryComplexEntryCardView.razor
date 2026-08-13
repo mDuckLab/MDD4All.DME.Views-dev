@@ -1,0 +1,65 @@
+﻿@namespace MDD4All.DME.Views.Editor
+@using MDD4All.DME.ViewModels.Editor
+@using MDD4All.UI.Buttons
+
+@* Key and value are both objects here, so neither fits into a table cell. They get a card each,
+   stacked, with the entry's delete button on the key - removing a key removes the whole entry. *@
+<div class="dict-complex-entry">
+
+    <div class="dict-part dict-part-key">
+        <div class="dict-part-header @(!ShowKeyExpander ? "no-toggle" : "")" @onclick="ToggleKey">
+            @if (ShowKeyExpander)
+            {
+                <div class="expander-icon" title="@(IsKeyExpanded ? "Collapse" : "Expand")">
+                    @(IsKeyExpanded ? "▼" : "▶")
+                </div>
+            }
+            else
+            {
+                <div class="expander-icon"></div>
+            }
+
+            <div class="dict-part-label">KEY</div>
+
+            <div class="dict-part-actions" @onclick:stopPropagation="true">
+                <ToolbarButton Action="ToolbarButton.ToolbarAction.Delete"
+                               OnActionTriggered="OnDeleteEntry"
+                               Tooltip="Delete entry" />
+            </div>
+        </div>
+
+        @if (DataContext.KeyEditor != null)
+        {
+            <ObjectEditorView ViewModel="@DataContext.KeyEditor"
+                              ShowOwnHeader="false"
+                              MaxDepth="@MaxDepth"
+                              CurrentDepth="@(CurrentDepth + 1)" />
+        }
+    </div>
+
+    <div class="dict-part dict-part-value">
+        <div class="dict-part-header @(!ShowValueExpander ? "no-toggle" : "")" @onclick="ToggleValue">
+            @if (ShowValueExpander)
+            {
+                <div class="expander-icon" title="@(IsValueExpanded ? "Collapse" : "Expand")">
+                    @(IsValueExpanded ? "▼" : "▶")
+                </div>
+            }
+            else
+            {
+                <div class="expander-icon"></div>
+            }
+
+            <div class="dict-part-label">VALUE</div>
+        </div>
+
+        @if (DataContext.ValueEditor != null)
+        {
+            <ObjectEditorView ViewModel="@DataContext.ValueEditor"
+                              ShowOwnHeader="false"
+                              MaxDepth="@MaxDepth"
+                              CurrentDepth="@(CurrentDepth + 1)" />
+        }
+    </div>
+
+</div>

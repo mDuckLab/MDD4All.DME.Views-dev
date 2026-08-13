@@ -40,7 +40,16 @@
         }
         else
         {
-            <div class="dict-unsupported-msg">Dictionaries mit komplexem Key werden noch nicht unterstützt.</div>
+            @* Complex key - key and value each get their own card, stacked. *@
+            @foreach (var child in this.ViewModel.Children)
+            {
+                if (child is DictionaryEntryViewModel entryViewModel)
+                {
+                    <DictionaryComplexEntryCardView DataContext="@entryViewModel"
+                             MaxDepth="@MaxDepth"
+                             CurrentDepth="@CurrentDepth" />
+                }
+            }
         }
     }
 
