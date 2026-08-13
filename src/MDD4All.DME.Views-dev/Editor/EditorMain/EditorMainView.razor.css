@@ -1,7 +1,9 @@
 ﻿/* --- 2. GRID SYSTEM --- */
 .workbench-grid {
     display: grid !important;
-    height: 100vh;
+    /* Fills the shell's content row rather than the whole window, so a notification
+       below it stays visible instead of being pushed off screen. */
+    height: 100%;
     /* Rows: Toolbar, Breadcrumb, and Content Area */
     grid-template-rows: var(--header-height) 2.4rem 1fr 30px;
     /* Columns: Sidebar, Resizer (0px width for "Zen" look), and Editor */

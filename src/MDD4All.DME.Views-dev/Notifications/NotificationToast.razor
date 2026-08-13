@@ -1,0 +1,11 @@
+﻿@namespace MDD4All.DME.Views.Notifications
+
+@if (!string.IsNullOrEmpty(Message))
+{
+    <div class="@CssClass" role="status">
+        <span class="notificationText">@Message</span>
+        <button class="notificationClose" type="button" title="Schließen" @onclick="Dismiss">
+            <i class="bi bi-x-lg"></i>
+        </button>
+    </div>
+}
