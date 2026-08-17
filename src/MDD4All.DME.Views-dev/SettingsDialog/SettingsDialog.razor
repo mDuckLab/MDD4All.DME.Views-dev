@@ -28,6 +28,24 @@
                         <input class="form-check-input" type="checkbox" role="switch" id="saveTypeInformation" @bind="DataSettings.SaveTypeInformation" />
                         <label class="settings-toggle-label" for="saveTypeInformation">Typinformation mitspeichern</label>
                     </div>
+                    <div class="settings-toggle">
+                        <input class="form-check-input" type="checkbox" role="switch" id="writeComplexDictionaryKeys" @bind="DataSettings.WriteComplexDictionaryKeys" />
+                        <label class="settings-toggle-label" for="writeComplexDictionaryKeys">
+                            Dictionaries mit Objekt-Schlüssel speichern
+                            <small class="settings-toggle-hint">
+                                Aus: Andere Programme können die Datei lesen, diese Einträge werden aber als leer gespeichert.
+                            </small>
+                        </label>
+                    </div>
+                    <div class="settings-toggle">
+                        <input class="form-check-input" type="checkbox" role="switch" id="confirmComplexKeyLoss" @bind="DataSettings.ConfirmComplexKeyLossWithDialog" />
+                        <label class="settings-toggle-label" for="confirmComplexKeyLoss">
+                            Verlust vor dem Speichern bestätigen
+                            <small class="settings-toggle-hint">
+                                Aus: Es wird ohne Nachfrage gespeichert und erst danach gemeldet, was weggefallen ist.
+                            </small>
+                        </label>
+                    </div>
                     break;
 
                 case SettingsCategory.Editor:
