@@ -1,13 +1,13 @@
-﻿@namespace MDD4All.DME.Views.DataManager
+@namespace MDD4All.DME.Views.DataManager
 
 <div>
-    @if(!DataContext.ShowXml)
+    @if(!Serialization.ShowXml)
     {
-        <pre><code class="json">@DataContext.ActiveObjectJsonString</code></pre>
+        <pre><code class="json">@DataContext.JsonString</code></pre>
     }
     else
     {
-        <pre><code class="xml">@DataContext.ActiveObjectXmlString</code></pre>
+        <pre><code class="xml">@DataContext.XmlString</code></pre>
     }
 
 </div>

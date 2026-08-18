@@ -28,6 +28,10 @@ namespace MDD4All.DME.Views.Editor
         [Inject]
         public DataManagerFileViewModel DataFile { get; set; } = null!;
 
+        // Only for the JSON/XML switch above the raw data view.
+        [Inject]
+        public DataSerializationViewModel Serialization { get; set; } = null!;
+
         [Inject]
         public ILanguageSetter LanguageSetter { get; set; } = null!;
 

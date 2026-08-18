@@ -9,8 +9,13 @@ namespace MDD4All.DME.Views.DataManager
     {
         [Inject] private IJSRuntime _js { get; set; } = null!;
 
+        // The text comes from the file manager, which knows both the object and the settings it
+        // has to be written with.
         [Parameter]
-        public DataSerializationViewModel DataContext { get; set; } = null!;
+        public DataManagerFileViewModel DataContext { get; set; } = null!;
+
+        // Only for the JSON/XML switch.
+        [Inject] private DataSerializationViewModel Serialization { get; set; } = null!;
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
