@@ -17,7 +17,7 @@
 
         <TreeDisplayToggle @bind-Active="ExplorerSettings.ShowIcons" />
 
-        <EditorDepthStepperView @bind-Value="EditorSettings.MaxDepth" Limit="9" />
+        <EditorDepthStepperView @bind-Value="EditorSettings.MaxDepth" Limit="Editor.MaxSelectableDepth" />
 
         <button class="wb-btn-reset" title="Einstellungen" type="button" @onclick="@(() => Navigation.OpenSettings())">
             <i class="bi bi-gear-fill"></i>
