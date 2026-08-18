@@ -15,7 +15,7 @@ namespace MDD4All.DME.Views.DataManager
         public DataManagerFileViewModel DataContext { get; set; } = null!;
 
         // Only for the JSON/XML switch.
-        [Inject] private DataSerializationViewModel Serialization { get; set; } = null!;
+        [Inject] private EditorViewModel Editor { get; set; } = null!;
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
