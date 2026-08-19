@@ -23,6 +23,7 @@ namespace MDD4All.DME.Views.SettingsDialog
         private enum SettingsCategory
         {
             SaveOptions,
+            DataModels,
             Editor,
             Explorer
         }

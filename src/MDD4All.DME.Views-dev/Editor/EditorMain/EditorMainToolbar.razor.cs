@@ -2,6 +2,7 @@ using MDD4All.DME.DataAccess.DataModels;
 using MDD4All.DME.ViewModels.DataManager;
 using Microsoft.AspNetCore.Components;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 
 namespace MDD4All.DME.Views.Editor
@@ -14,6 +15,29 @@ namespace MDD4All.DME.Views.Editor
         // The data models compiled into the solution. Takes the place of picking a DLL.
         [Inject]
         public DataModelCatalog Catalog { get; set; } = null!;
+
+        [Inject]
+        public DataManagerSettingsViewModel DataSettings { get; set; } = null!;
+
+        // Filtered down to what New can build, unless the setting says otherwise.
+        private List<Type> OfferedTypes
+        {
+            get
+            {
+                List<Type> result;
+
+                if (DataSettings.ShowAllDataModels)
+                {
+                    result = Catalog.AllTypes;
+                }
+                else
+                {
+                    result = Catalog.AvailableTypes;
+                }
+
+                return result;
+            }
+        }
 
         // Opening a file that names its own type changes the selection, so the button has to
         // redraw without anyone clicking it.
