@@ -39,11 +39,12 @@ namespace MDD4All.DME.Views.Editor
             }
         }
 
-        // Opening a file that names its own type changes the selection, so the button has to
-        // redraw without anyone clicking it.
+        // Two things change this toolbar without anyone touching it: opening a file that names
+        // its own type moves the selection, and the settings dialog decides how long the list is.
         protected override void OnInitialized()
         {
             DataFile.PropertyChanged += this.OnDataFilePropertyChanged;
+            DataSettings.PropertyChanged += this.OnDataSettingsPropertyChanged;
 
             // Something has to be selected for New to do anything at all.
             if (DataFile.SelectedDataModel == null && Catalog.AvailableTypes.Count > 0)
@@ -55,11 +56,20 @@ namespace MDD4All.DME.Views.Editor
         public void Dispose()
         {
             DataFile.PropertyChanged -= this.OnDataFilePropertyChanged;
+            DataSettings.PropertyChanged -= this.OnDataSettingsPropertyChanged;
         }
 
         private void OnDataFilePropertyChanged(object? sender, PropertyChangedEventArgs e)
         {
             if (e.PropertyName == nameof(DataManagerFileViewModel.SelectedDataModel))
+            {
+                this.InvokeAsync(this.StateHasChanged);
+            }
+        }
+
+        private void OnDataSettingsPropertyChanged(object? sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == nameof(DataManagerSettingsViewModel.ShowAllDataModels))
             {
                 this.InvokeAsync(this.StateHasChanged);
             }
