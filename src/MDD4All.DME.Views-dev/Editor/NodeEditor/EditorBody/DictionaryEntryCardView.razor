@@ -15,10 +15,6 @@
             {
                 <div class="expander-icon-right"></div>
             }
-            @if (Settings.ShowIndexNumbers)
-            {
-                <small>@DataContext.Level</small>
-            }
             @if (Settings.ShowIcons && DataContext.ValueEditor != null)
             {
                 <EditorTreeIcon DataContext="DataContext.ValueEditor" />

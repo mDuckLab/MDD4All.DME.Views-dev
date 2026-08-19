@@ -50,16 +50,8 @@
 
                 case SettingsCategory.Editor:
                     <div class="settings-toggle">
-                        <input class="form-check-input" type="checkbox" role="switch" id="editorTint" @bind="EditorSettings.TintEnabled" />
-                        <label class="settings-toggle-label" for="editorTint">Colour</label>
-                    </div>
-                    <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="editorIcons" @bind="EditorSettings.ShowIcons" />
                         <label class="settings-toggle-label" for="editorIcons">Icons</label>
-                    </div>
-                    <div class="settings-toggle">
-                        <input class="form-check-input" type="checkbox" role="switch" id="editorIndex" @bind="EditorSettings.ShowIndexNumbers" />
-                        <label class="settings-toggle-label" for="editorIndex">Index numbers</label>
                     </div>
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="editorReadOnlyBadges" @bind="EditorSettings.ShowReadOnlyBadges" />
@@ -75,10 +67,6 @@
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="explorerIcons" @bind="ExplorerSettings.ShowIcons" />
                         <label class="settings-toggle-label" for="explorerIcons">Icons</label>
-                    </div>
-                    <div class="settings-toggle">
-                        <input class="form-check-input" type="checkbox" role="switch" id="explorerIndex" @bind="ExplorerSettings.ShowIndexNumbers" />
-                        <label class="settings-toggle-label" for="explorerIndex">Index numbers</label>
                     </div>
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="explorerTypeSymbols" @bind="ExplorerSettings.ShowTypeSymbols" />

@@ -31,35 +31,6 @@ namespace MDD4All.DME.Views.Editor
             }
         }
 
-        private string CssBackgroundExtension
-        {
-            get
-            {
-                string result = "";
-                // Matches EditorTreeIcon's per-type colors (forestgreen / darkviolet /
-                // orange), mixed with white via CSS color-mix() so the --tint-intensity
-                // slider in EditorMainView can adjust all three live, no rebuild needed.
-                if (ViewModel is ListEditorViewModel)
-                {
-                    result = "tint-list";
-                }
-                else if (ViewModel is ArrayEditorViewModel)
-                {
-                    result = "tint-array";
-                }
-                else if (ViewModel is DictionaryEditorViewModel)
-                {
-                    result = "tint-dict";
-                }
-                else if (ViewModel is ComplexObjectEditorViewModel)
-                {
-                    // Just for testing - Object was meant to stay near-white,
-                    // this lets us compare it live before deciding.
-                    result = "tint-object";
-                }
-                return result;
-            }
-        }
 
         protected override void OnParametersSet()
         {

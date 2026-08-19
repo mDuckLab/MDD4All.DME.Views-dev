@@ -50,7 +50,6 @@ namespace MDD4All.DME.Views.Editor
         {
             if (firstRender)
             {
-                await ApplyTintIntensity();
             }
         }
 
@@ -88,10 +87,6 @@ namespace MDD4All.DME.Views.Editor
 
         private async void OnEditorSettingsPropertyChanged(object? sender, PropertyChangedEventArgs e)
         {
-            if (e.PropertyName == nameof(EditorAppearanceSettingsViewModel.TintEnabled))
-            {
-                await ApplyTintIntensity();
-            }
 
             await InvokeAsync(StateHasChanged);
         }
@@ -101,11 +96,6 @@ namespace MDD4All.DME.Views.Editor
             InvokeAsync(StateHasChanged);
         }
 
-        private async Task ApplyTintIntensity()
-        {
-            string intensity = EditorSettings.TintEnabled ? "6%" : "0%";
-            await JSRuntime.InvokeVoidAsync("setTintIntensity", intensity);
-        }
 
         private string GetTypeSymbol(ITreeNode node)
         {

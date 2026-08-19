@@ -44,7 +44,7 @@
                           SelectedNodeChanged="OnTreeSelectionChange"
                           ShowTreeIcons="@ExplorerSettings.ShowTypeSymbols"
                           TypeSymbolSelector="GetTypeSymbol">
-                    <TitleTemplate Context="node">@if (ExplorerSettings.ShowIndexNumbers) { @node.Level } @if (ExplorerSettings.ShowIcons) { <EditorTreeIcon DataContext="node" /> }@node.Title</TitleTemplate>
+                    <TitleTemplate Context="node">@if (ExplorerSettings.ShowIcons) { <EditorTreeIcon DataContext="node" /> }@node.Title</TitleTemplate>
                 </MvvmTree>
             }
         </div>
@@ -66,7 +66,7 @@
             else
             {
                 <div class="p-5 text-center text-muted">
-                    Please select an item from the explorer to begin editing.
+                    No object selected. Pick a data model to create one, or open a file.
                 </div>
             }
         </div>
