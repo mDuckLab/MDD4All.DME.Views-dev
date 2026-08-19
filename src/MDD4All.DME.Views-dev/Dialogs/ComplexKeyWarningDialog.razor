@@ -1,11 +1,11 @@
 @namespace MDD4All.DME.Views.Dialogs
 @using MDD4All.UI.BlazorComponents.Dialog
 <ModalDialog DialogType="ModalDialog.ModalDialogType.DeleteCancel"
-             ConfirmText="Trotzdem speichern"
-             Title="Daten gehen verloren"
+             ConfirmText="Save anyway"
+             Title="Data will be lost"
              OnClose="OnDialogClose">
     <div>
         <p>@DataContext.ComplexKeyWarningMessage</p>
-        <p>Die Datei bleibt lesbar für andere Werkzeuge, die betroffenen Einträge stehen danach aber auf null.</p>
+        <p>The file stays readable for other tools, but the affected entries will be null afterwards.</p>
     </div>
 </ModalDialog>

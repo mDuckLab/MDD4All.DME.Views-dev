@@ -30,7 +30,7 @@ namespace MDD4All.DME.Views.Editor
                 index = arrayAccess.Index;
             }
 
-            // Wenn ein g�ltiger Index gefunden wurde, den L�schbefehl ausf�hren
+            // Run the delete command once a valid index was found
             if (index != -1 && ViewModel.DeleteAtIndexCommand.CanExecute(index))
             {
                 ViewModel.DeleteAtIndexCommand.Execute(index);

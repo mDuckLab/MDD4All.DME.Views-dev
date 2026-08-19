@@ -3,8 +3,8 @@
 @using MDD4All.UI.Buttons
 
 @{
-    // Berechnung: Wie viele Zeilen brauchen wir für 3 Spalten?
-    // Wir nehmen immer mindestens 5 Zeilen als Basis.
+    // How many rows do three columns need?
+    // Five rows is the minimum we start from.
     int childCount = ViewModel.Children?.Count ?? 0;
     int requiredRows = (int)Math.Ceiling(childCount / 3.0);
     int maxRows = Math.Max(5, requiredRows);

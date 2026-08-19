@@ -2,7 +2,7 @@
 @using MDD4All.UI.BlazorComponents.Dialog
 @using MDD4All.UI.BlazorComponents.Localization
 
-<ModalDialog Title="Einstellungen" DialogType="ModalDialog.ModalDialogType.Ok" OnClose="OnClose">
+<ModalDialog Title="Settings" DialogType="ModalDialog.ModalDialogType.Ok" OnClose="OnClose">
     <div class="settings-layout">
         <div class="settings-nav">
             <button type="button" class="settings-nav-item @(ActiveCategory == SettingsCategory.Global ? "active" : "")"
@@ -26,23 +26,23 @@
                     <LanguageSelection />
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="saveTypeInformation" @bind="DataSettings.SaveTypeInformation" />
-                        <label class="settings-toggle-label" for="saveTypeInformation">Typinformation mitspeichern</label>
+                        <label class="settings-toggle-label" for="saveTypeInformation">Save type information</label>
                     </div>
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="writeComplexDictionaryKeys" @bind="DataSettings.WriteComplexDictionaryKeys" />
                         <label class="settings-toggle-label" for="writeComplexDictionaryKeys">
-                            Dictionaries mit Objekt-Schlüssel speichern
+                            Save dictionaries with object keys
                             <small class="settings-toggle-hint">
-                                Aus: Andere Programme können die Datei lesen, diese Einträge werden aber als leer gespeichert.
+                                Off: other tools can read the file, but these entries are saved as empty.
                             </small>
                         </label>
                     </div>
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="confirmComplexKeyLoss" @bind="DataSettings.ConfirmComplexKeyLossWithDialog" />
                         <label class="settings-toggle-label" for="confirmComplexKeyLoss">
-                            Warnung als Dialogfenster
+                            Warn in a dialog window
                             <small class="settings-toggle-hint">
-                                Aus: Es wird ohne Nachfrage gespeichert und erst danach in der Leiste gemeldet, was weggefallen ist.
+                                Off: the file is saved without asking, and what was dropped is reported afterwards in the bar.
                             </small>
                         </label>
                     </div>
@@ -51,7 +51,7 @@
                 case SettingsCategory.Editor:
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="editorTint" @bind="EditorSettings.TintEnabled" />
-                        <label class="settings-toggle-label" for="editorTint">Farbe</label>
+                        <label class="settings-toggle-label" for="editorTint">Colour</label>
                     </div>
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="editorIcons" @bind="EditorSettings.ShowIcons" />
@@ -59,15 +59,15 @@
                     </div>
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="editorIndex" @bind="EditorSettings.ShowIndexNumbers" />
-                        <label class="settings-toggle-label" for="editorIndex">Indexnummern</label>
+                        <label class="settings-toggle-label" for="editorIndex">Index numbers</label>
                     </div>
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="editorReadOnlyBadges" @bind="EditorSettings.ShowReadOnlyBadges" />
-                        <label class="settings-toggle-label" for="editorReadOnlyBadges">Readonly-Badges</label>
+                        <label class="settings-toggle-label" for="editorReadOnlyBadges">Read-only badges</label>
                     </div>
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="editorTypeBadges" @bind="EditorSettings.ShowTypeBadges" />
-                        <label class="settings-toggle-label" for="editorTypeBadges">Typ-Badges</label>
+                        <label class="settings-toggle-label" for="editorTypeBadges">Type badges</label>
                     </div>
                     break;
 
@@ -78,11 +78,11 @@
                     </div>
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="explorerIndex" @bind="ExplorerSettings.ShowIndexNumbers" />
-                        <label class="settings-toggle-label" for="explorerIndex">Indexnummern</label>
+                        <label class="settings-toggle-label" for="explorerIndex">Index numbers</label>
                     </div>
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="explorerTypeSymbols" @bind="ExplorerSettings.ShowTypeSymbols" />
-                        <label class="settings-toggle-label" for="explorerTypeSymbols">Typ-Symbole</label>
+                        <label class="settings-toggle-label" for="explorerTypeSymbols">Type symbols</label>
                     </div>
                     break;
             }

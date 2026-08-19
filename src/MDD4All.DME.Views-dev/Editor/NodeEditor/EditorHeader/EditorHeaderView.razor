@@ -32,8 +32,9 @@
         {
             <EditorTreeIcon DataContext="DataContext" />
         }
-        @* Nur der Titel bekommt die Ghost-Klasse *@
+        @* Only the title gets the ghost class *@
         <span class="selectable-label @(DataContext.IsNull ? "label-ghost" : "")"
+              title="@SelectLabelTooltip"
               @onclick="OnSelectLabel"
               @onclick:stopPropagation="DataContext.IsNull">
             @DataContext.Title

@@ -15,7 +15,7 @@ namespace MDD4All.DME.Views.Editor
         [Parameter] public int CurrentDepth { get; set; }
 
         /// <summary>
-        /// F�hrt den L�schbefehl f�r diesen spezifischen Dictionary-Eintrag aus.
+        /// Runs the delete command for this one dictionary entry.
         /// </summary>
         private void OnDeleteEntry()
         {

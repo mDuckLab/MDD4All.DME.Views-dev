@@ -37,9 +37,27 @@ namespace MDD4All.DME.Views.Editor
             await OnAction.InvokeAsync(action);
         }
 
+        // Clicking the title is the only way to make a node the root of the editor, and nothing
+        // on the card says so. An object that does not exist yet cannot be selected, so it says
+        // why instead.
+        private string SelectLabelTooltip
+        {
+            get
+            {
+                string result = "Show this object as the editor's root";
+
+                if (DataContext.IsNull)
+                {
+                    result = "Not created yet - press Create to be able to open it";
+                }
+
+                return result;
+            }
+        }
+
         private async Task OnSelectLabel()
         {
-            // Wir f�hren die Aktion nur aus, wenn das Objekt NICHT null ist
+            // The action only runs when the object is not null
             if (!DataContext.IsNull)
             {
                 await Notify(EditorAction.Select);
