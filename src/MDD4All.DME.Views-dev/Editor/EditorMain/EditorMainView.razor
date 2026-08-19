@@ -55,39 +55,21 @@
 
     @* --- MAIN EDITOR AREA --- *@
     <main class="editor-area">
-        @if (Editor.ShowRawData)
-        {
-            <div class="panel-header">
-                Raw Data &nbsp;&nbsp;
-
-                    JSON &nbsp;<div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox"
-                               @bind="Editor.ShowXml"/> </div>
-                    XML
-
-            </div>
-            <div class="editor-body">
-                <RawDataView DataContext="DataFile" />
-            </div>
-        }
-        else
-        {
-            <div class="panel-header">Editor</div>
-            <div class="editor-body">
-                @if (Editor.SelectedEditorViewModel != null)
-                {
-                    <ObjectEditorView ViewModel="@((ObjectEditorViewModel)Editor.SelectedEditorViewModel)"
-                                      MaxDepth="@EditorSettings.MaxDepth"
-                                      CurrentDepth="1" />
-                }
-                else
-                {
-                    <div class="p-5 text-center text-muted">
-                        Please select an item from the explorer to begin editing.
-                    </div>
-                }
-            </div>
-        }
+        <div class="panel-header">Editor</div>
+        <div class="editor-body">
+            @if (Editor.SelectedEditorViewModel != null)
+            {
+                <ObjectEditorView ViewModel="@((ObjectEditorViewModel)Editor.SelectedEditorViewModel)"
+                                  MaxDepth="@EditorSettings.MaxDepth"
+                                  CurrentDepth="1" />
+            }
+            else
+            {
+                <div class="p-5 text-center text-muted">
+                    Please select an item from the explorer to begin editing.
+                </div>
+            }
+        </div>
     </main>
 
     <div class="status-bar-area">
