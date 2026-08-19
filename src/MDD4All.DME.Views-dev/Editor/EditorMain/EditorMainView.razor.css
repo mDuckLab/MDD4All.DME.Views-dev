@@ -126,6 +126,11 @@
     grid-area: statusbar;
 }
 
+/* Eats the space between the file commands on the left and the view controls on the right. */
+.toolbar-spacer {
+    flex: 1;
+}
+
 /* TOP TOOLBAR
    The main command center of the workbench. 
    Uses a subtle gray-blue background to distinguish the global actions 

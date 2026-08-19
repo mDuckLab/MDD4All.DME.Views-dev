@@ -2,28 +2,34 @@
 @using MDD4All.DME.ViewModels.DataManager
 <div>
 
-    @* The data models are compiled into the solution, so the catalogue can simply list them.
-       Picking one creates an empty object of that type - there is no DLL to load first.
+    @* The data model sits in front of New rather than inside it, because it is not only what New
+       builds - it is also what a file gets read as when the file does not name a type itself.
 
        Buttons rather than a select: a select only reports a change, so picking the same model
        twice in a row would do nothing the second time. *@
     <div class="btn-group">
-        <button class="btn btn-outline-primary btn-sm dropdown-toggle" type="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-file-earmark-plus"></i>
-            New
+        <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                title="Data model used for New, and for files that do not name one">
+            @SelectedModelName
         </button>
         <ul class="dropdown-menu">
             @foreach (Type dataModelType in Catalog.AvailableTypes)
             {
                 <li>
                     <button class="dropdown-item" type="button"
-                            @onclick="@(() => CreateNew(dataModelType))">
+                            @onclick="@(() => DataFile.SelectedDataModel = dataModelType)">
                         @dataModelType.Name
                     </button>
                 </li>
             }
         </ul>
+
+        <button class="btn btn-outline-primary btn-sm"
+                @onclick="() => DataFile.NewDataFileCommand.Execute(null)">
+            <i class="bi bi-file-earmark-plus"></i>
+            New
+        </button>
     </div>
 
     <button class="btn btn-outline-secondary btn-sm"

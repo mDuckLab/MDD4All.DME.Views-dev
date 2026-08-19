@@ -15,7 +15,9 @@
             <EditorMainToolbar />
         </div>
 
-        <TreeDisplayToggle @bind-Active="ExplorerSettings.ShowIcons" />
+        @* Pushed to the right-hand end - everything before it acts on the file, this one only
+           on what is shown. *@
+        <div class="toolbar-spacer"></div>
 
         <EditorDepthStepperView @bind-Value="EditorSettings.MaxDepth" Limit="Editor.MaxSelectableDepth" />
 

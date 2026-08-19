@@ -4,9 +4,9 @@
 <ModalDialog Title="Settings" DialogType="ModalDialog.ModalDialogType.Ok" OnClose="OnClose">
     <div class="settings-layout">
         <div class="settings-nav">
-            <button type="button" class="settings-nav-item @(ActiveCategory == SettingsCategory.Global ? "active" : "")"
-                    @onclick="@(() => ActiveCategory = SettingsCategory.Global)">
-                Global
+            <button type="button" class="settings-nav-item @(ActiveCategory == SettingsCategory.SaveOptions ? "active" : "")"
+                    @onclick="@(() => ActiveCategory = SettingsCategory.SaveOptions)">
+                Save options
             </button>
             <button type="button" class="settings-nav-item @(ActiveCategory == SettingsCategory.Editor ? "active" : "")"
                     @onclick="@(() => ActiveCategory = SettingsCategory.Editor)">
@@ -21,7 +21,7 @@
         <div class="settings-content">
             @switch (ActiveCategory)
             {
-                case SettingsCategory.Global:
+                case SettingsCategory.SaveOptions:
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="saveTypeInformation" @bind="DataSettings.SaveTypeInformation" />
                         <label class="settings-toggle-label" for="saveTypeInformation">Save type information</label>

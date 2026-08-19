@@ -18,11 +18,11 @@ namespace MDD4All.DME.Views.SettingsDialog
         [Parameter]
         public EventCallback<bool> OnClose { get; set; }
 
-        private SettingsCategory ActiveCategory { get; set; } = SettingsCategory.Global;
+        private SettingsCategory ActiveCategory { get; set; } = SettingsCategory.SaveOptions;
 
         private enum SettingsCategory
         {
-            Global,
+            SaveOptions,
             Editor,
             Explorer
         }
