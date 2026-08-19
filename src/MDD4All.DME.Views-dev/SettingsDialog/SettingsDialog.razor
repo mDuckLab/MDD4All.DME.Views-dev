@@ -28,24 +28,6 @@
                         <input class="form-check-input" type="checkbox" role="switch" id="saveTypeInformation" @bind="DataSettings.SaveTypeInformation" />
                         <label class="settings-toggle-label" for="saveTypeInformation">Save type information</label>
                     </div>
-                    <div class="settings-toggle">
-                        <input class="form-check-input" type="checkbox" role="switch" id="writeComplexDictionaryKeys" @bind="DataSettings.WriteComplexDictionaryKeys" />
-                        <label class="settings-toggle-label" for="writeComplexDictionaryKeys">
-                            Save dictionaries with object keys
-                            <small class="settings-toggle-hint">
-                                Off: other tools can read the file, but these entries are saved as empty.
-                            </small>
-                        </label>
-                    </div>
-                    <div class="settings-toggle">
-                        <input class="form-check-input" type="checkbox" role="switch" id="confirmComplexKeyLoss" @bind="DataSettings.ConfirmComplexKeyLossWithDialog" />
-                        <label class="settings-toggle-label" for="confirmComplexKeyLoss">
-                            Warn in a dialog window
-                            <small class="settings-toggle-hint">
-                                Off: the file is saved without asking, and what was dropped is reported afterwards in the bar.
-                            </small>
-                        </label>
-                    </div>
                     break;
 
                 case SettingsCategory.Editor:

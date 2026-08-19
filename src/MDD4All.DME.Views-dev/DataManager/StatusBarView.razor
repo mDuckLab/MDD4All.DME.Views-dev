@@ -1,8 +1,15 @@
-﻿@namespace MDD4All.DME.Views.DataManager
+@namespace MDD4All.DME.Views.DataManager
 
-<div class="statusBar">
-    @DataContext.StatusText
+@* One bar for both jobs: what is open, and why the last attempt to open something failed.
+   The error takes over the whole bar and turns it red, so it cannot be read as file details. *@
+<div class="statusBar @(HasError ? "statusBarError" : "")">
+    <span class="statusBarText">@DataContext.StatusText</span>
+
+    @if (HasError)
+    {
+        <button class="statusBarClose" type="button" title="Dismiss"
+                @onclick="DataContext.DismissLoadError">
+            &times;
+        </button>
+    }
 </div>
-
-
-
