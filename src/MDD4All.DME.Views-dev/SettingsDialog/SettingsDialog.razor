@@ -1,6 +1,5 @@
 @namespace MDD4All.DME.Views.SettingsDialog
 @using MDD4All.UI.BlazorComponents.Dialog
-@using MDD4All.UI.BlazorComponents.Localization
 
 <ModalDialog Title="Settings" DialogType="ModalDialog.ModalDialogType.Ok" OnClose="OnClose">
     <div class="settings-layout">
@@ -23,7 +22,6 @@
             @switch (ActiveCategory)
             {
                 case SettingsCategory.Global:
-                    <LanguageSelection />
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="saveTypeInformation" @bind="DataSettings.SaveTypeInformation" />
                         <label class="settings-toggle-label" for="saveTypeInformation">Save type information</label>

@@ -28,8 +28,6 @@ namespace MDD4All.DME.Views.Editor
         [Inject]
         public DataManagerFileViewModel DataFile { get; set; } = null!;
 
-        [Inject]
-        public ILanguageSetter LanguageSetter { get; set; } = null!;
 
         [Inject]
         public EditorAppearanceSettingsViewModel EditorSettings { get; set; } = null!;
@@ -41,7 +39,6 @@ namespace MDD4All.DME.Views.Editor
         protected override void OnInitialized()
         {
             this.Editor.PropertyChanged += this.OnEditorPropertyChanged;
-            LanguageSetter.CultureChanged += OnCultureChanged;
             EditorSettings.PropertyChanged += OnEditorSettingsPropertyChanged;
             ExplorerSettings.PropertyChanged += OnExplorerSettingsPropertyChanged;
         }
@@ -53,10 +50,6 @@ namespace MDD4All.DME.Views.Editor
             }
         }
 
-        private void OnCultureChanged(object? sender, System.EventArgs e)
-        {
-            InvokeAsync(StateHasChanged);
-        }
 
         public void Dispose()
         {
