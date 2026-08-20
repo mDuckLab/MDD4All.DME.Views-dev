@@ -1,6 +1,7 @@
-﻿@namespace MDD4All.DME.Views.Editor
+@namespace MDD4All.DME.Views.Editor
 @using MDD4All.DME.ViewModels.Editor
 @using MDD4All.UI.Buttons
+@inject MDD4All.DME.Views.Localization.AppTextProvider L
 
 @{
     // How many rows do three columns need?
@@ -18,7 +19,7 @@
     {
         if (ViewModel.Children.Count == 0)
         {
-            <div>This collection contains no elements.</div>
+            <div>@L["Editor.EmptyCollection"]</div>
         }
         else
         {

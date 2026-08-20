@@ -1,8 +1,9 @@
 ﻿@namespace MDD4All.DME.Views.Editor
 @using System.Globalization
+@inject MDD4All.DME.Views.Localization.AppTextProvider L
 
 <div class="property-row @(IsCompact ? "compact-mode" : "") @(ViewModel.IsReadOnly ? "readonly" : "")"
-     title="@(ViewModel.IsReadOnly ? "Read-only" : null)">
+     title="@(ViewModel.IsReadOnly ? L["Tooltip.ReadOnly"] : null)">
     @*<label class="property-label">@ViewModel.Title</label>*@
 
 

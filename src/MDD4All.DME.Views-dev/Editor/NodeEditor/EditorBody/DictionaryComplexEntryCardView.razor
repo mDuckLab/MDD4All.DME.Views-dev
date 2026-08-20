@@ -1,6 +1,7 @@
-﻿@namespace MDD4All.DME.Views.Editor
+@namespace MDD4All.DME.Views.Editor
 @using MDD4All.DME.ViewModels.Editor
 @using MDD4All.UI.Buttons
+@inject MDD4All.DME.Views.Localization.AppTextProvider L
 
 @* Key and value are both objects here, so neither fits into a table cell. They get a card each,
    stacked, with the entry's delete button on the key - removing a key removes the whole entry. *@
@@ -24,7 +25,7 @@
             <div class="dict-part-actions" @onclick:stopPropagation="true">
                 <ToolbarButton Action="ToolbarButton.ToolbarAction.Delete"
                                OnActionTriggered="OnDeleteEntry"
-                               Tooltip="Delete entry" />
+                               Tooltip="@L["Tooltip.DeleteEntry"]" />
             </div>
         </div>
 
@@ -50,7 +51,7 @@
                 <div class="expander-icon"></div>
             }
 
-            <div class="dict-part-label">VALUE</div>
+            <div class="dict-part-label">@L["Editor.ValueColumn"]</div>
         </div>
 
         @if (DataContext.ValueEditor != null)

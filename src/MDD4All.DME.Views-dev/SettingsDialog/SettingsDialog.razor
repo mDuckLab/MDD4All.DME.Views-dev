@@ -1,21 +1,22 @@
 @namespace MDD4All.DME.Views.SettingsDialog
 @using MDD4All.UI.BlazorComponents.Dialog
 @using MDD4All.UI.BlazorComponents.Localization
+@inject MDD4All.DME.Views.Localization.AppTextProvider L
 
-<ModalDialog Title="Settings" DialogType="ModalDialog.ModalDialogType.Ok" OnClose="OnClose">
+<ModalDialog Title="@L["Settings.Title"]" DialogType="ModalDialog.ModalDialogType.Ok" OnClose="OnClose">
     <div class="settings-layout">
         <div class="settings-nav">
             <button type="button" class="settings-nav-item @(ActiveCategory == SettingsCategory.Global ? "active" : "")"
                     @onclick="@(() => ActiveCategory = SettingsCategory.Global)">
-                Global
+                @L["Settings.Global"]
             </button>
             <button type="button" class="settings-nav-item @(ActiveCategory == SettingsCategory.Editor ? "active" : "")"
                     @onclick="@(() => ActiveCategory = SettingsCategory.Editor)">
-                Editor
+                @L["Settings.Editor"]
             </button>
             <button type="button" class="settings-nav-item @(ActiveCategory == SettingsCategory.Explorer ? "active" : "")"
                     @onclick="@(() => ActiveCategory = SettingsCategory.Explorer)">
-                Explorer
+                @L["Settings.Explorer"]
             </button>
         </div>
 
@@ -26,23 +27,23 @@
                     <LanguageSelection />
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="saveTypeInformation" @bind="DataSettings.SaveTypeInformation" />
-                        <label class="settings-toggle-label" for="saveTypeInformation">Save type information</label>
+                        <label class="settings-toggle-label" for="saveTypeInformation">@L["Settings.SaveTypeInformation"]</label>
                     </div>
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="writeComplexDictionaryKeys" @bind="DataSettings.WriteComplexDictionaryKeys" />
                         <label class="settings-toggle-label" for="writeComplexDictionaryKeys">
-                            Save dictionaries with object keys
+                            @L["Settings.WriteComplexKeys"]
                             <small class="settings-toggle-hint">
-                                Off: other tools can read the file, but these entries are saved as empty.
+                                @L["Settings.WriteComplexKeysHint"]
                             </small>
                         </label>
                     </div>
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="confirmComplexKeyLoss" @bind="DataSettings.ConfirmComplexKeyLossWithDialog" />
                         <label class="settings-toggle-label" for="confirmComplexKeyLoss">
-                            Warn in a dialog window
+                            @L["Settings.WarnInDialog"]
                             <small class="settings-toggle-hint">
-                                Off: the file is saved without asking, and what was dropped is reported afterwards in the bar.
+                                @L["Settings.WarnInDialogHint"]
                             </small>
                         </label>
                     </div>
@@ -51,38 +52,38 @@
                 case SettingsCategory.Editor:
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="editorTint" @bind="EditorSettings.TintEnabled" />
-                        <label class="settings-toggle-label" for="editorTint">Colour</label>
+                        <label class="settings-toggle-label" for="editorTint">@L["Settings.Colour"]</label>
                     </div>
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="editorIcons" @bind="EditorSettings.ShowIcons" />
-                        <label class="settings-toggle-label" for="editorIcons">Icons</label>
+                        <label class="settings-toggle-label" for="editorIcons">@L["Settings.Icons"]</label>
                     </div>
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="editorIndex" @bind="EditorSettings.ShowIndexNumbers" />
-                        <label class="settings-toggle-label" for="editorIndex">Index numbers</label>
+                        <label class="settings-toggle-label" for="editorIndex">@L["Settings.IndexNumbers"]</label>
                     </div>
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="editorReadOnlyBadges" @bind="EditorSettings.ShowReadOnlyBadges" />
-                        <label class="settings-toggle-label" for="editorReadOnlyBadges">Read-only badges</label>
+                        <label class="settings-toggle-label" for="editorReadOnlyBadges">@L["Settings.ReadOnlyBadges"]</label>
                     </div>
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="editorTypeBadges" @bind="EditorSettings.ShowTypeBadges" />
-                        <label class="settings-toggle-label" for="editorTypeBadges">Type badges</label>
+                        <label class="settings-toggle-label" for="editorTypeBadges">@L["Settings.TypeBadges"]</label>
                     </div>
                     break;
 
                 case SettingsCategory.Explorer:
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="explorerIcons" @bind="ExplorerSettings.ShowIcons" />
-                        <label class="settings-toggle-label" for="explorerIcons">Icons</label>
+                        <label class="settings-toggle-label" for="explorerIcons">@L["Settings.Icons"]</label>
                     </div>
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="explorerIndex" @bind="ExplorerSettings.ShowIndexNumbers" />
-                        <label class="settings-toggle-label" for="explorerIndex">Index numbers</label>
+                        <label class="settings-toggle-label" for="explorerIndex">@L["Settings.IndexNumbers"]</label>
                     </div>
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="explorerTypeSymbols" @bind="ExplorerSettings.ShowTypeSymbols" />
-                        <label class="settings-toggle-label" for="explorerTypeSymbols">Type symbols</label>
+                        <label class="settings-toggle-label" for="explorerTypeSymbols">@L["Settings.TypeSymbols"]</label>
                     </div>
                     break;
             }

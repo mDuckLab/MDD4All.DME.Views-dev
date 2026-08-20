@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Toolbar.Save" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="Toolbar.SaveAs" xml:space="preserve">
+    <value>Speichern unter...</value>
+  </data>
+  <data name="Toolbar.Editor" xml:space="preserve">
+    <value>Editor</value>
+  </data>
+  <data name="Toolbar.RawData" xml:space="preserve">
+    <value>Rohdaten</value>
+  </data>
+  <data name="Panel.Explorer" xml:space="preserve">
+    <value>Explorer</value>
+  </data>
+  <data name="Panel.Editor" xml:space="preserve">
+    <value>Editor</value>
+  </data>
+  <data name="Panel.RawData" xml:space="preserve">
+    <value>Rohdaten</value>
+  </data>
+  <data name="Editor.SelectToBegin" xml:space="preserve">
+    <value>Bitte im Explorer einen Eintrag auswählen, um mit dem Bearbeiten zu beginnen.</value>
+  </data>
+  <data name="Editor.NotInitialized" xml:space="preserve">
+    <value>Das Element ist nicht angelegt.</value>
+  </data>
+  <data name="Editor.EmptyCollection" xml:space="preserve">
+    <value>Diese Sammlung enthält keine Elemente.</value>
+  </data>
+  <data name="Editor.VisibleDepth" xml:space="preserve">
+    <value>Sichtbare Tiefe</value>
+  </data>
+  <data name="Editor.ValueColumn" xml:space="preserve">
+    <value>WERT</value>
+  </data>
+  <data name="Editor.ReadOnlyBadge" xml:space="preserve">
+    <value>schreibgeschützt</value>
+  </data>
+  <data name="Tooltip.Settings" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="Tooltip.CreateInstance" xml:space="preserve">
+    <value>Instanz anlegen</value>
+  </data>
+  <data name="Tooltip.AddElement" xml:space="preserve">
+    <value>Element hinzufügen</value>
+  </data>
+  <data name="Tooltip.DeleteInstance" xml:space="preserve">
+    <value>Instanz löschen</value>
+  </data>
+  <data name="Tooltip.DeleteEntry" xml:space="preserve">
+    <value>Eintrag löschen</value>
+  </data>
+  <data name="Tooltip.EnableDeleteMode" xml:space="preserve">
+    <value>Löschmodus einschalten</value>
+  </data>
+  <data name="Tooltip.DisableDeleteMode" xml:space="preserve">
+    <value>Löschmodus ausschalten</value>
+  </data>
+  <data name="Tooltip.Expand" xml:space="preserve">
+    <value>Aufklappen</value>
+  </data>
+  <data name="Tooltip.Collapse" xml:space="preserve">
+    <value>Zuklappen</value>
+  </data>
+  <data name="Tooltip.ReadOnly" xml:space="preserve">
+    <value>Nur lesbar</value>
+  </data>
+  <data name="Tooltip.Close" xml:space="preserve">
+    <value>Schließen</value>
+  </data>
+  <data name="Tooltip.SelectAsRoot" xml:space="preserve">
+    <value>Dieses Objekt als Wurzel im Editor anzeigen</value>
+  </data>
+  <data name="Tooltip.NotCreatedYet" xml:space="preserve">
+    <value>Noch nicht angelegt - erst über Anlegen erzeugen</value>
+  </data>
+  <data name="Settings.Title" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="Settings.Global" xml:space="preserve">
+    <value>Allgemein</value>
+  </data>
+  <data name="Settings.Editor" xml:space="preserve">
+    <value>Editor</value>
+  </data>
+  <data name="Settings.Explorer" xml:space="preserve">
+    <value>Explorer</value>
+  </data>
+  <data name="Settings.SaveTypeInformation" xml:space="preserve">
+    <value>Typinformation mitspeichern</value>
+  </data>
+  <data name="Settings.WriteComplexKeys" xml:space="preserve">
+    <value>Dictionaries mit Objekt-Schlüssel speichern</value>
+  </data>
+  <data name="Settings.WriteComplexKeysHint" xml:space="preserve">
+    <value>Aus: Andere Programme können die Datei lesen, diese Einträge werden aber als leer gespeichert.</value>
+  </data>
+  <data name="Settings.WarnInDialog" xml:space="preserve">
+    <value>Warnung als Dialogfenster</value>
+  </data>
+  <data name="Settings.WarnInDialogHint" xml:space="preserve">
+    <value>Aus: Es wird ohne Nachfrage gespeichert und erst danach in der Leiste gemeldet, was weggefallen ist.</value>
+  </data>
+  <data name="Settings.Colour" xml:space="preserve">
+    <value>Farbe</value>
+  </data>
+  <data name="Settings.Icons" xml:space="preserve">
+    <value>Symbole</value>
+  </data>
+  <data name="Settings.IndexNumbers" xml:space="preserve">
+    <value>Indexnummern</value>
+  </data>
+  <data name="Settings.ReadOnlyBadges" xml:space="preserve">
+    <value>Schreibschutz-Markierungen</value>
+  </data>
+  <data name="Settings.TypeBadges" xml:space="preserve">
+    <value>Typ-Markierungen</value>
+  </data>
+  <data name="Settings.TypeSymbols" xml:space="preserve">
+    <value>Typ-Symbole</value>
+  </data>
+  <data name="StartPage.NothingSelected" xml:space="preserve">
+    <value>Nichts ausgewählt.</value>
+  </data>
+  <data name="StartPage.OpenDataModel" xml:space="preserve">
+    <value>Datenmodell öffnen</value>
+  </data>
+  <data name="StartPage.CreateNewFile" xml:space="preserve">
+    <value>Neue Datei anlegen</value>
+  </data>
+  <data name="StartPage.OpenExistingFile" xml:space="preserve">
+    <value>Vorhandene Datei öffnen</value>
+  </data>
+  <data name="Dialog.SelectDataModelType" xml:space="preserve">
+    <value>Datenmodell-Typ auswählen...</value>
+  </data>
+  <data name="Dialog.DataWillBeLost" xml:space="preserve">
+    <value>Daten gehen verloren</value>
+  </data>
+  <data name="Dialog.SaveAnyway" xml:space="preserve">
+    <value>Trotzdem speichern</value>
+  </data>
+  <data name="Dialog.StillReadable" xml:space="preserve">
+    <value>Die Datei bleibt für andere Werkzeuge lesbar, die betroffenen Einträge stehen danach aber auf null.</value>
+  </data>
+  <data name="Explorer.ShowIcons" xml:space="preserve">
+    <value>Explorer-Symbole</value>
+  </data>
+</root>

@@ -1,10 +1,11 @@
-﻿@namespace MDD4All.DME.Views.Notifications
+@namespace MDD4All.DME.Views.Notifications
+@inject MDD4All.DME.Views.Localization.AppTextProvider L
 
 @if (!string.IsNullOrEmpty(Message))
 {
     <div class="@CssClass" role="status">
         <span class="notificationText">@Message</span>
-        <button class="notificationClose" type="button" title="Close" @onclick="Dismiss">
+        <button class="notificationClose" type="button" title="@L["Tooltip.Close"]" @onclick="Dismiss">
             <i class="bi bi-x-lg"></i>
         </button>
     </div>

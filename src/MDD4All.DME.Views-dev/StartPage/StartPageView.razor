@@ -1,9 +1,10 @@
-﻿@namespace MDD4All.DME.Views.StartPage
+@namespace MDD4All.DME.Views.StartPage
+@inject MDD4All.DME.Views.Localization.AppTextProvider L
 
 <div class="mainGrid">
     <div class="logo">
         <img src="images/Synorvia_logo.png" width="200" style="margin-left: -20px;margin-top:-50px;"/>
-        <button class="wb-btn-reset" title="Einstellungen" type="button" @onclick="@(() => OnSettingsRequested.InvokeAsync())">
+        <button class="wb-btn-reset" title="@L["Tooltip.Settings"]" type="button" @onclick="@(() => OnSettingsRequested.InvokeAsync())">
             <i class="bi bi-gear-fill"></i>
         </button>
     </div>
@@ -11,7 +12,7 @@
         Current Data Model:<br/>
         @if(Settings.CurrentDataModel == null)
         {
-            <span class="currentDataModelTitle">Nothing selected.</span>
+            <span class="currentDataModelTitle">@L["StartPage.NothingSelected"]</span>
         }
         else
         {
@@ -27,7 +28,7 @@
     </div>
     <div class="dataModelCommands">
         <div class="commandLink"
-             @onclick="() => Model.OpenDataModelCommand.Execute(null)">Open a data model</div>
+             @onclick="() => Model.OpenDataModelCommand.Execute(null)">@L["StartPage.OpenDataModel"]</div>
     </div>
     <div class="dataModelRecentHeader">
         Recent Data Models
@@ -50,10 +51,10 @@
     </div>
     <div class="dataFileCommands">
         <div class="commandLink"
-             @onclick="() => DataFile.NewDataFileCommand.Execute(null)">Create a new file</div>
+             @onclick="() => DataFile.NewDataFileCommand.Execute(null)">@L["StartPage.CreateNewFile"]</div>
 
         <div class="commandLink"
-             @onclick="() => DataFile.OpenDataFileCommand.Execute(null)">Open an existing file</div>
+             @onclick="() => DataFile.OpenDataFileCommand.Execute(null)">@L["StartPage.OpenExistingFile"]</div>
     </div>
     <div class="dataFileRecentHeader">
         Recent Data Files

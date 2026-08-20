@@ -1,7 +1,6 @@
 using MDD4All.DME.ViewModels.DataManager;
 using MDD4All.DME.ViewModels.Editor;
 using MDD4All.DME.ViewModels.Editor.Settings;
-using MDD4All.Localization.Contracts;
 using MDD4All.UI.DataModels.Tree;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
@@ -29,9 +28,6 @@ namespace MDD4All.DME.Views.Editor
         public DataManagerFileViewModel DataFile { get; set; } = null!;
 
         [Inject]
-        public ILanguageSetter LanguageSetter { get; set; } = null!;
-
-        [Inject]
         public EditorAppearanceSettingsViewModel EditorSettings { get; set; } = null!;
 
         [Inject]
@@ -41,7 +37,6 @@ namespace MDD4All.DME.Views.Editor
         protected override void OnInitialized()
         {
             this.Editor.PropertyChanged += this.OnEditorPropertyChanged;
-            LanguageSetter.CultureChanged += OnCultureChanged;
             EditorSettings.PropertyChanged += OnEditorSettingsPropertyChanged;
             ExplorerSettings.PropertyChanged += OnExplorerSettingsPropertyChanged;
         }
@@ -52,11 +47,6 @@ namespace MDD4All.DME.Views.Editor
             {
                 await ApplyTintIntensity();
             }
-        }
-
-        private void OnCultureChanged(object? sender, System.EventArgs e)
-        {
-            InvokeAsync(StateHasChanged);
         }
 
         public void Dispose()

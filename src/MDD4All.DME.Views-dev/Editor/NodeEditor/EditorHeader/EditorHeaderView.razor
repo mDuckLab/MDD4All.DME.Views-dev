@@ -1,7 +1,8 @@
-﻿@namespace MDD4All.DME.Views.Editor
+@namespace MDD4All.DME.Views.Editor
 @using MDD4All.DME.ViewModels.Editor
 @using MDD4All.UI.Buttons
 @using MDD4All.UI.Buttons.Icons
+@inject MDD4All.DME.Views.Localization.AppTextProvider L
 
 <div class="card-header-grid @(!DataContext.EditorState.ShowExpander ? "no-toggle" : "")" @onclick="@(() => Notify(EditorAction.ToggleExpand))">
     
@@ -9,7 +10,7 @@
     <div class="card-title">
         @if (DataContext.EditorState.ShowExpander)
         {
-            <div class="expander-icon-right" title="@(DataContext.EditorState.IsExpanded ? "Collapse" : "Expand")">
+            <div class="expander-icon-right" title="@(DataContext.EditorState.IsExpanded ? L["Tooltip.Collapse"] : L["Tooltip.Expand"])">
                 @(DataContext.EditorState.IsExpanded ? "▼" : "▶")
             </div>
         }
@@ -47,7 +48,7 @@
 
         @if (DataContext.IsReadOnly && Settings.ShowReadOnlyBadges)
         {
-            <span class="readonly-badge">readonly</span>
+            <span class="readonly-badge">@L["Editor.ReadOnlyBadge"]</span>
         }
     </div>
 
@@ -57,26 +58,26 @@
             {
                 <ToolbarButton Action="ToolbarButton.ToolbarAction.Create"
                            OnActionTriggered="@(() => Notify(EditorAction.Create))"
-                           Tooltip="Create instance" />
+                           Tooltip="@L["Tooltip.CreateInstance"]" />
             }
             @if (DataContext.EditorState.ShowAddButton)
             {
                 <ToolbarButton Action="ToolbarButton.ToolbarAction.Add"
                            OnActionTriggered="@(() => Notify(EditorAction.Add))"
-                           Tooltip="Add element" />
+                           Tooltip="@L["Tooltip.AddElement"]" />
             }
             @if (DataContext.EditorState.ShowDeleteModeButton)
             {
                 <ToolbarButton Action="ToolbarButton.ToolbarAction.DeleteMode"
                            IsActive="@DataContext.EditorState.IsDeleteMode"
                            OnActionTriggered="@(() => Notify(EditorAction.ToggleDeleteMode))"
-                           Tooltip="@(DataContext.EditorState.IsDeleteMode ? "Disable delete mode" : "Enable delete mode")" />
+                           Tooltip="@(DataContext.EditorState.IsDeleteMode ? L["Tooltip.DisableDeleteMode"] : L["Tooltip.EnableDeleteMode"])" />
             }
             @if (DataContext.EditorState.ShowDeleteButton)
             {
                 <ToolbarButton Action="ToolbarButton.ToolbarAction.Delete"
                            OnActionTriggered="@(() => Notify(EditorAction.Delete))"
-                           Tooltip="Delete instance" />
+                           Tooltip="@L["Tooltip.DeleteInstance"]" />
             }
         </div>
 

@@ -1,6 +1,7 @@
 @namespace MDD4All.DME.Views.Editor
 @using MDD4All.DME.ViewModels.Editor
 @using MDD4All.UI.Buttons
+@inject MDD4All.DME.Views.Localization.AppTextProvider L
 
 <div class="dict-row">
     @* 1. Key Spalte mit Trennstrich *@
@@ -40,7 +41,7 @@
         {
             <ToolbarButton Action="ToolbarButton.ToolbarAction.DeleteChild"
                            OnActionTriggered="OnDeleteEntry"
-                           Tooltip="Delete entry" />
+                           Tooltip="@L["Tooltip.DeleteEntry"]" />
         }
     </div>
 </div>

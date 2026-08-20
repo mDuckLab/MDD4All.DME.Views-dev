@@ -13,5 +13,6 @@ namespace MDD4All.DME.Views.Editor
 
         [Inject]
         public DataManagerFileViewModel DataFile { get; set; } = null!;
+
     }
 }

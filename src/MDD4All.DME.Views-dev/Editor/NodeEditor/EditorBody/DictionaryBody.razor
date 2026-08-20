@@ -1,5 +1,6 @@
-﻿@namespace MDD4All.DME.Views.Editor
+@namespace MDD4All.DME.Views.Editor
 @using MDD4All.DME.ViewModels.Editor
+@inject MDD4All.DME.Views.Localization.AppTextProvider L
 
 <div class="dictionary-table">
     @if (this.ViewModel.Children?.Any() == true)
@@ -10,7 +11,7 @@
                 @* Tabellen-Header mit Trennstrich-Logik im CSS *@
                 <div class="dict-header">
                     <div class="header-cell">KEY</div>
-                    <div class="header-cell">VALUE</div>
+                    <div class="header-cell">@L["Editor.ValueColumn"]</div>
                     <div class="action-placeholder"></div>
                 </div>
 

@@ -1,5 +1,6 @@
 ﻿@namespace MDD4All.DME.Views.Editor
 @using MDD4All.UI.BlazorComponents.Localization
+@inject MDD4All.DME.Views.Localization.AppTextProvider L
 <div>
 
     <img src="images/Synorvia_icon.png"
@@ -9,26 +10,28 @@
     <button class="btn btn-outline-primary btn-sm"
             @onclick="() => DataFile.SaveDataFileCommand.Execute(null)">
         <i class="bi bi-save-fill"></i>
-        Save
+        @L["Toolbar.Save"]
     </button>
 
     <button class="btn btn-outline-secondary btn-sm"
             @onclick="() => DataFile.SaveDataFileAsCommand.Execute(null)">
         <i class="bi bi-save"></i>
-        Save as...
+        @L["Toolbar.SaveAs"]
     </button>
 
     <div class="btn-group" role="group" aria-label="Basic radio toggle button group" style="margin-left:20px;">
         <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked
                @onclick="() => Editor.ShowRawData = false">
-        <label class="btn btn-outline-dark btn-sm" for="btnradio1">Editor</label>
+        <label class="btn btn-outline-dark btn-sm" for="btnradio1">@L["Toolbar.Editor"]</label>
 
         <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off"
                @onclick="() => Editor.ShowRawData = true">
-        <label class="btn btn-outline-dark btn-sm" for="btnradio3">Raw data</label>
+        <label class="btn btn-outline-dark btn-sm" for="btnradio3">@L["Toolbar.RawData"]</label>
     </div>
 
     <LanguageSelection />
+
+
 </div>
 
 
