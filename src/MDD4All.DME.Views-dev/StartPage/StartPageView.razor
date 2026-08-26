@@ -1,4 +1,4 @@
-@namespace MDD4All.DME.Views.StartPage
+﻿@namespace MDD4All.DME.Views.StartPage
 
 <div class="mainGrid">
     <div class="logo">
@@ -8,7 +8,7 @@
         </button>
     </div>
     <div class="curentDataModel">
-        Current Data Model:<br/>
+        @L["StartPage.CurrentDataModel"]<br/>
         @if(Settings.CurrentDataModel == null)
         {
             <span class="currentDataModelTitle">@L["StartPage.NothingSelected"]</span>
@@ -20,17 +20,17 @@
 
     </div>
     <div class="dataModelMainHeader">
-        Data Model
+        @L["StartPage.DataModel"]
     </div>
     <div class="dataModelSubHeader">
-        Open a data model
+        @L["StartPage.OpenDataModelSub"]
     </div>
     <div class="dataModelCommands">
         <div class="commandLink"
              @onclick="() => Model.OpenDataModelCommand.Execute(null)">@L["StartPage.OpenDataModel"]</div>
     </div>
     <div class="dataModelRecentHeader">
-        Recent Data Models
+        @L["StartPage.RecentDataModels"]
     </div>
     <div class="dataModelRecentEntries">
         @for(int counter = 0; counter < Settings.RecentDataModels.Count(); counter++)
@@ -43,10 +43,10 @@
     </div>
 
     <div class="dataFileMainHeader">
-        Data Editor
+        @L["StartPage.DataEditor"]
     </div>
     <div class="dataFileSubHeader">
-        Edit a data file
+        @L["StartPage.EditDataFileSub"]
     </div>
     <div class="dataFileCommands">
         <div class="commandLink"
@@ -56,7 +56,7 @@
              @onclick="() => DataFile.OpenDataFileCommand.Execute(null)">@L["StartPage.OpenExistingFile"]</div>
     </div>
     <div class="dataFileRecentHeader">
-        Recent Data Files
+        @L["StartPage.RecentDataFiles"]
     </div>
     <div class="dataFileRecentEntries">
         @for (int counter = 0; counter < Settings.RecentDataFiles.Count(); counter++)

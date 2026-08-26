@@ -1,4 +1,4 @@
-@namespace MDD4All.DME.Views.Editor
+﻿@namespace MDD4All.DME.Views.Editor
 @using MDD4All.DME.ViewModels.Editor
 
 @{
@@ -30,7 +30,7 @@
                 }
                 else if (this.ViewModel.HasChildNodes)
                 {
-                    <div class="depth-limit-msg">... Maximale Tiefe erreicht ...</div>
+                    <div class="depth-limit-msg">@L["Editor.MaxDepthReached"]</div>
                 }
             </div>
         }

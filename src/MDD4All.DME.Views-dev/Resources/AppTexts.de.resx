@@ -208,4 +208,31 @@
   <data name="Explorer.ShowIcons" xml:space="preserve">
     <value>Explorer-Symbole</value>
   </data>
+  <data name="StartPage.CurrentDataModel" xml:space="preserve">
+    <value>Aktuelles Datenmodell:</value>
+  </data>
+  <data name="StartPage.DataModel" xml:space="preserve">
+    <value>Datenmodell</value>
+  </data>
+  <data name="StartPage.OpenDataModelSub" xml:space="preserve">
+    <value>Ein Datenmodell öffnen</value>
+  </data>
+  <data name="StartPage.RecentDataModels" xml:space="preserve">
+    <value>Zuletzt verwendete Datenmodelle</value>
+  </data>
+  <data name="StartPage.DataEditor" xml:space="preserve">
+    <value>Dateneditor</value>
+  </data>
+  <data name="StartPage.EditDataFileSub" xml:space="preserve">
+    <value>Eine Datendatei bearbeiten</value>
+  </data>
+  <data name="StartPage.RecentDataFiles" xml:space="preserve">
+    <value>Zuletzt verwendete Dateien</value>
+  </data>
+  <data name="Editor.KeyColumn" xml:space="preserve">
+    <value>SCHLÜSSEL</value>
+  </data>
+  <data name="Editor.MaxDepthReached" xml:space="preserve">
+    <value>... maximale Tiefe erreicht ...</value>
+  </data>
 </root>
