@@ -1,4 +1,4 @@
-@namespace MDD4All.DME.Views.Editor
+﻿@namespace MDD4All.DME.Views.Editor
 @using MDD4All.DME.ViewModels.Editor
 @using MDD4All.UI.Buttons
 
@@ -7,7 +7,7 @@
         <div class="card-title">
             @if (ShowExpander)
             {
-                <div class="expander-icon-right" title="@(IsExpanded ? "Collapse" : "Expand")">
+                <div class="expander-icon-right" title="@(IsExpanded ? L["Tooltip.Collapse"] : L["Tooltip.Expand"])">
                     @(IsExpanded ? "▼" : "▶")
                 </div>
             }

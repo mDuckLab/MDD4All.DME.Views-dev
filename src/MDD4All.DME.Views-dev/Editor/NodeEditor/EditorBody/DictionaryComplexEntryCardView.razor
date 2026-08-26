@@ -1,4 +1,4 @@
-@namespace MDD4All.DME.Views.Editor
+﻿@namespace MDD4All.DME.Views.Editor
 @using MDD4All.DME.ViewModels.Editor
 @using MDD4All.UI.Buttons
 
@@ -10,7 +10,7 @@
         <div class="dict-part-header @(!ShowKeyExpander ? "no-toggle" : "")" @onclick="ToggleKey">
             @if (ShowKeyExpander)
             {
-                <div class="expander-icon" title="@(IsKeyExpanded ? "Collapse" : "Expand")">
+                <div class="expander-icon" title="@(IsKeyExpanded ? L["Tooltip.Collapse"] : L["Tooltip.Expand"])">
                     @(IsKeyExpanded ? "▼" : "▶")
                 </div>
             }
@@ -41,7 +41,7 @@
         <div class="dict-part-header @(!ShowValueExpander ? "no-toggle" : "")" @onclick="ToggleValue">
             @if (ShowValueExpander)
             {
-                <div class="expander-icon" title="@(IsValueExpanded ? "Collapse" : "Expand")">
+                <div class="expander-icon" title="@(IsValueExpanded ? L["Tooltip.Collapse"] : L["Tooltip.Expand"])">
                     @(IsValueExpanded ? "▼" : "▶")
                 </div>
             }

@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Components;
+﻿using Microsoft.AspNetCore.Components;
 using System.ComponentModel;
 using System.Threading.Tasks;
 using MDD4All.DME.ViewModels.Editor;
@@ -44,11 +44,11 @@ namespace MDD4All.DME.Views.Editor
         {
             get
             {
-                string result = "Show this object as the editor's root";
+                string result = L["Tooltip.SelectAsRoot"];
 
                 if (DataContext.IsNull)
                 {
-                    result = "Not created yet - press Create to be able to open it";
+                    result = L["Tooltip.NotCreatedYet"];
                 }
 
                 return result;
