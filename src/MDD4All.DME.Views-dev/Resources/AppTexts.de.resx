@@ -235,4 +235,7 @@
   <data name="Editor.MaxDepthReached" xml:space="preserve">
     <value>... maximale Tiefe erreicht ...</value>
   </data>
+  <data name="Settings.AnnotationNames" xml:space="preserve">
+    <value>Beschriftungen aus dem Datenmodell</value>
+  </data>
 </root>

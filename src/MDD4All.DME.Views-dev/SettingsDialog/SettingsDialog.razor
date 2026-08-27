@@ -1,4 +1,4 @@
-@namespace MDD4All.DME.Views.SettingsDialog
+﻿@namespace MDD4All.DME.Views.SettingsDialog
 @using MDD4All.UI.BlazorComponents.Dialog
 @using MDD4All.UI.BlazorComponents.Localization
 
@@ -64,6 +64,10 @@
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="editorReadOnlyBadges" @bind="EditorSettings.ShowReadOnlyBadges" />
                         <label class="settings-toggle-label" for="editorReadOnlyBadges">@L["Settings.ReadOnlyBadges"]</label>
+                    </div>
+                    <div class="settings-toggle">
+                        <input class="form-check-input" type="checkbox" role="switch" id="editorAnnotationNames" @bind="EditorSettings.ShowAnnotationNames" />
+                        <label class="settings-toggle-label" for="editorAnnotationNames">@L["Settings.AnnotationNames"]</label>
                     </div>
                     <div class="settings-toggle">
                         <input class="form-check-input" type="checkbox" role="switch" id="editorTypeBadges" @bind="EditorSettings.ShowTypeBadges" />
